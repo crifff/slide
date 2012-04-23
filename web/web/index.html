@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Web1.0</title>
+
+    <meta name="description" content="A jQuery library for modern HTML presentations">
+    <meta name="author" content="Caleb Troughton">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+
+    <!-- Core and extension CSS files -->
+    <link rel="stylesheet" href="../core/deck.core.css">
+    <link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="../extensions/status/deck.status.css">
+    <link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+
+    <!-- Theme CSS files (menu swaps these out) -->
+    <link rel="stylesheet" id="style-theme-link" href="../themes/style/swiss.css">
+    <link rel="stylesheet" id="transition-theme-link" href="../themes/transition/fade.css">
+
+    <!-- Custom CSS just for this page -->
+    <link rel="stylesheet" href="introduction.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="../modernizr.custom.js"></script>
+  </head>
+
+  <body class="deck-container">
+    <!--
+    <div class="theme-menu">
+      <h2>Themes</h2>	
+
+      <label for="style-themes">Style:</label>
+      <select id="style-themes">
+        <option selected value="../themes/style/web-2.0.css">Web 2.0</option>
+        <option value="../themes/style/swiss.css">Swiss</option>
+        <option value="../themes/style/neon.css">Neon</option>
+        <option value="">None</option>
+      </select>
+
+      <label for="transition-themes">Transition:</label>
+      <select id="transition-themes">
+        <option selected value="../themes/transition/horizontal-slide.css">Horizontal Slide</option>
+        <option value="../themes/transition/vertical-slide.css">Vertical Slide</option>
+        <option value="../themes/transition/fade.css">Fade</option>
+        <option value="">None</option>
+      </select>
+    </div>
+    -->
+    <div class="slide" id="title-slide">
+      <h1>Webのおはなし</h1>
+    </div>
+
+    <div class="slide" id="how-to-overview">
+      <h2>Webって</h2>
+      <section>
+        <h3>www = World Wide Web</h3>
+        <p>
+        web=蜘蛛の巣<br />
+        世界中に蜘蛛の巣のように張り巡らされた通信網を指す
+        </p>
+        <aside class="image right">
+          <img src="img/web.jpg" style="width:200px"  alt="" />
+          <p>(C)東映</p>
+        </aside>
+      </section>
+    </div>
+
+    <div class="slide" id="markup">
+      <h2>wwwって</h2>
+      <section>
+        <h3>World Wide Web = HTTP + URI + HTML</h3>
+        <ul>
+          <li>CERNのティム・バーナーズ・リーが発明</li>
+          <li>インターネット上でハイパーテキストを扱うシステム</li>
+          <li>画像なんて無かった</li>
+        </ul>
+        <aside class="image">
+          <img src="img/lhc.jpg" alt="" style="width:500px" />
+          <p style="text-align:center">CERN名物ラージハドロンコライダー　かっこいいね！</p>
+        </aside>
+      </section>
+      <!--
+      <pre><code>&lt;div class=&quot;slide&quot;&gt;
+   &lt;h2&gt;How to Make a Deck&lt;/h2&gt;
+   &lt;ol&gt;
+      &lt;li&gt;
+         &lt;h3&gt;Write Slides&lt;/h3&gt;
+         &lt;p&gt;Slide content is simple HTML.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+         &lt;h3&gt;Choose Themes&lt;/h3&gt;
+         &lt;p&gt;One for slide styles and one for deck transitions.&lt;/p&gt;
+      &lt;/li&gt;
+      &hellip;
+   &lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+      -->
+    </div>
+
+    <div class="slide" id="URI_1">
+      <h2>URIって</h2>
+      <section>
+        <h3>URLとURIって違うの？</h3>
+        <aside id="URI_1_tigeeyo" class="image slide">
+          <img src="img/tigeeyo.jpg" style="width:300px" alt="" />
+          <p class="center">違います。</p>
+        </aside>
+      </section>
+      <section class="slide">
+        <h3>URL(Uuniform Resource Locater)</h3>
+        <p>=リソースの場所を示す</p>
+        <h3>URI(Uniform Resource Identifier)</h3>
+        <p>=リソースを特定する識別子</p>
+      </section>
+    </div>
+
+    <div class="slide" id="URI2">
+      <h2>URIって</h2>
+      <img src="img/uri.gif">
+      <p>URIの中にhttp:やftp:などのスキームが存在<br>
+      そのうちのLocationを示せるスキームがURL</p>
+    </div>
+
+    <div class="slide" id="URI_construction">
+      <h2>URIって</h2>
+  <pre> <code><span class="URI2-scheme">http:</span><span class="URI2-autholity">//<span class="URI2-userinfo">name:pass@</span><span class="URI2-host">hoge.jp</span><span class="URI2-port">:80</span></span><span class="URI2-path">/i/index.cgi</span><span class="URI2-query">?page=2&amp;cate=3</span><span class="URI2-fragment">#fragment</code> </pre>
+      <p>URIの構成要素を見てみる</p>
+
+      <ul>
+        <li class="slide" id="URI2-scheme">
+        <strong>scheme</strong> httpとかhttpsとかftpとかetcetc...	
+        </li>
+
+        <li class="slide" id="URI2-authority">
+        <strong>autholrty</strong> 接続先の情報
+        </li>
+        <li style="list-style:none">
+
+        <ul>
+          <li class="slide" id="URI2-userinfo">
+          <strong>userinfo</strong> ユーザ名とパスワード。多くのHttpは問われないので省略
+          </li>
+          <li class="slide" id="URI2-host">
+          <strong>host</strong> サーバのホスト名
+          </li>
+          <li class="slide" id="URI2-port">
+          <strong>port</strong> 使用するポート
+          </li>
+        </ul>
+        </li>
+
+        <li class="slide" id="URI2-path">
+        <strong>path</strong> オーソリティの中のアクセス先
+        </li>
+        <li class="slide" id="URI2-query">
+        <strong>query</strong> さらに細かい指示
+        </li>
+        <li class="slide" id="URI2-fragment">
+        <strong>fragment</strong> 通常サーバには送られずクライアントで処理される
+        </li>
+      </ul>
+    </div>
+
+    <div class="slide" id="URI_kobanashi">
+      <h2>URIって</h2>
+      <section>
+      	<h3>ティム・バーナーズ・リー後に語る</h3>
+        <h4 class="center slide">「当時はいいアイデアだと思ったのだが、今にして思えば'//'要らなかった」</h4>
+        <aside class="image slide">
+        	<img src="img/nukasioru.jpg" alt="" />
+        </aside>
+      </section>
+
+    </div>
+
+    <div class="slide" id="http1">
+      <h2>httpって</h2>
+      <section>
+        <h3><ruby><rb>HyperTextTransferProtocol</rb><rt>超文件伝輸協定</rt></ruby></h3>
+      	<p>ハイパーなテキスト（HTML、XML etc）を転送するプロトコル(規定)</p>
+        <ul>
+        	<li>サーバ・クライアントで動作</li>
+        	<li>テキストに限らず画像・動画等のバイナリも扱える</li>
+        	<li>SSLで暗号化されるとHTTPS</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="slide" id="http2">
+	    <h2>httpって</h2>
+	    <section>
+		    <h3>歴史</h3>
+		    <ul>
+			    <li class="slide">
+			    <h4>HTTP/0.9(仕様が決まる以前の便宜的なバージョン)</h4>
+			    <p>最初の頃はヘッダとかもなかった</p>
+			    </li>
+			    <li class="slide">
+			    <h4>HTTP/1.0</h4>
+			    <p>
+			    1996年に正式なプロトコル仕様書が発行<br>
+			    だが時は世紀末・各ベンダが独自実装してしまったために形骸化</p>
+			    </li>
+			    <li class="slide">
+			    <h4>HTTP1.1</h4>
+			    <p>
+			    厳格な仕様・高度な機能<br>
+			    インターネットの標準化<br>
+			    </p>
+			    </li>
+		    </ul>
+	    </section>
+    </div>
+    <div class="slide" id="http3">
+	    <h2>httpって</h2>
+	    <section>
+		    <h3>歴史</h3>
+		    <ul>
+          <li>
+            <h4>HTTP/1.2〜</h4>
+            <aside class="slide">
+          	<img src="img/dame.jpg" alt="" />
+            <p class="center">開発中止</p>
+            </aside>
+             <ul class="slide">
+             	<li>進化の過程で複雑になりすぎた</li>
+             	<li>1.1を拡張していく形ですることでこれからもよろしく</li>
+             </ul>
+          </li>
+		    </ul>
+	    </section>
+    </div>
+
+    <div id="http4" class="slide">
+    	<h2>httpメッセージって</h2>
+    	<section>
+    		<h3>リクエスト</h3>
+    		<p>クライアントからサーバへの要求</p>
+    	</section>
+    	<section>
+    		<h3>レスポンス</h3>
+    		<p>リクエストに対してサーバからクライアントへ送られる結果</p>
+    	</section>
+    </div>
+
+    <div id="http5" class="slide">
+    	<h2>httpリクエスト</h2>
+      <h3>httpヘッダ</h3>
+      <pre><code><span class="http5-requestline"><span class="http5-method">GET </span><span class="http5-uri">/index.asp </span><span class="http5-version">HTTP/1.1</span></span><span class="http5-field">
+Host: www.bengo4.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:6.0.1) Gecko/20100101 Firefox/6.0.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: ja,en-us;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate
+Accept-Charset: Shift_JIS,utf-8;q=0.7,*;q=0.7
+Connection: keep-alive
+Cookie: l=a8581b60e2f38a718...(省略)</span></code></pre>
+      <section>
+        <ul>
+        	<li class="slide" id="http5-requestline">
+        		<strong>RequestLine</strong>
+        	</li>
+        	<li class="slide" id="http5-method">
+        		<strong>Method</strong> 利用するメソッド
+        	</li>
+        	<li class="slide" id="http5-uri">
+        		<strong>URI</strong> 対象とする場所
+        	</li>
+        	<li class="slide" id="http5-version">
+        		<strong>Version</strong> HTTPのバージョン
+        	</li>
+        	<li class="slide" id="http5-field">
+        		<strong>Field</strong> その他オプション
+        	</li>
+        </ul>
+    	</section>
+    </div>
+
+    <div id="http6" class="slide">
+    	<h2>httpメソッド</h2>
+      <h3>HTTP/1.1</h3>
+      <ul>
+      	<li>GET</li>
+      	<li>POST</li>
+      	<li>PUT</li>
+      	<li>DELETE</li>
+      	<li>HEAD</li>
+      	<li>OPTION</li>
+      	<li>TRACE</li>
+      	<li>CONNECT</li>
+      </ul>
+      <p>その他独自に拡張可能<br>
+      なんだけど古いブラウザとかだと対応してないし<br>
+      そもそもHTML4の仕様上はformのmethodにGET|POSTしか入らない<br>
+      </p>
+    </div>
+    
+    <div id="http7" class="slide">
+    	<h2>httpレスポンス</h2>
+      <h3>httpヘッダ</h3>
+      <pre><code><span class="http7-"><span class="http7-version">HTTP/1.1</span><span class="http7-statuscode"> 200</span><span class="http7-statusmessage"> OK</span><span class="http7-">
+Date: Fri, 02 Sep 2011 02:38:52 GMT
+Server: Apache
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 14194
+Keep-Alive: timeout=2, max=50
+Connection: Keep-Alive
+Content-Type: text/html; charset=EUC-JP</span></code></pre>
+    <ul>
+    	<li class="slide" id="http7-version">
+      <strong>Version</strong> HTTPのバージョン
+    	</li>
+    	<li class="slide" id="http7-statuscode">
+    		<strong>StatusCode</strong> 状態を表す3桁の数字
+    	</li>
+    	<li class="slide" id="http7-statusmessage">
+    		<strong>StatusMessage</strong> 
+    	</li>
+    </ul>
+    </div>
+
+    <div id="statusCode1" class="slide">
+    	<h2>ステータスコード</h2>
+      <p>状態により1xx〜5xxの数値が返される</p>
+    	<ul style="list-style:none">
+    		<li>
+    			<h3>1xx</h3>
+          <p>一時的なレスポンス。処理中。</p>
+    		</li>
+    		<li>
+    			<h3>2xx</h3>
+    			<p>成功</p>
+    		</li>
+    		<li>
+    			<h3>3xx</h3>
+    			<p>リダイレクション</p>
+    		</li>
+    		<li>
+    			<h3>4xx</h3>
+    			<p>クライアント側のエラー。リクエストが不正、URLを見つけ出せなかった等</p>
+    		</li>
+    		<li>
+    			<h3>5xx</h3>
+    			<p>サーバ側のエラー。予期せぬエラー、過負荷等</p>
+    		</li>
+    	</ul>
+    </div>
+
+    <div id="statusCode2" class="slide">
+    	<h2>代表的なステータスコード</h2>
+      <section>
+      	<h4>200</h4>
+        <p>成功。レスポンスの中身はリクエストのメソッドによって異なる</p>
+      </section>
+      <section>
+      	<h4>301</h4>
+      	<p>リソースが移動したことを示す。</p>
+      </section>
+      <section>
+      	<h4>400</h4>
+        <p>不正なリクエスト。リクエストの構文がおかしい</p>
+      </section>
+      <section>
+      	<h4>401</h4>
+      	<p>認証が必要</p>
+      </section>
+      <section>
+      	<h4>403</h4>
+      	<p>サーバ側が実行を拒否。実行権限のない動作を行った時とか</p>
+      </section>
+      <section>
+      	<h4>404</h4>
+      	<p>リソースが存在しない</p>
+      </section>
+      <section>
+      	<h4>500</h4>
+      	<p>サーバエラー。スクリプトのミスやらハードエラーやらいろいろ</p>
+      </section>
+      <section>
+      	<h4>503</h4>
+      	<p>サーバの都合でリクエストを処理できない。過負荷、メンテ等</p>
+      </section>
+    </div>
+
+    <div id="end" class="slide">
+    	<h2>おわり</h2>
+    	<img src="img/osimai.jpg" alt="" />
+    	<p></p>
+    </div>
+
+    <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+    <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+    <p class="deck-status">
+    <span class="deck-status-current"></span>
+    /
+    <span class="deck-status-total"></span>
+    </p>
+
+    <form action="." method="get" class="goto-form">
+	    <label for="goto-slide">Go to slide:</label>
+	    <input type="number" name="slidenum" id="goto-slide">
+	    <input type="submit" value="Go">
+    </form>
+
+    <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>
+
+	    <!-- Deck Core and extensions -->
+	    <script src="../core/deck.core.js"></script>
+	    <script src="../extensions/menu/deck.menu.js"></script>
+	    <script src="../extensions/goto/deck.goto.js"></script>
+	    <script src="../extensions/status/deck.status.js"></script>
+	    <script src="../extensions/navigation/deck.navigation.js"></script>
+	    <script src="../extensions/hash/deck.hash.js"></script>
+
+	    <!-- Specific to this page -->
+	    <script src="introduction.js"></script>
+
+    </body>
+  </html>
