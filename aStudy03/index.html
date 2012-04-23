@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Git</title>
+	
+	<link href="slideshow.css" rel="stylesheet" />
+	<link href="theme.css" rel="stylesheet" />
+	<link href="talk.css" rel="stylesheet" />
+	<script src="prefixfree.min.js"></script>
+</head>
+<body data-duration="10">
+
+<header id="intro" class="slide">
+</header>
+<section>
+	<header class="slide">
+    <h1>Git小ネタ21連発</h1>
+	</header>
+	
+	<section class="slide" id="diff-b">
+		<h2>diff -b</h2>
+		<p>スペースのみの変更を無視</p>
+	</section>
+	<section class="slide" id="diff--color-words">
+		<h2>diff --color-words</h2>
+		<p>ワード単位のDIFF</p>
+	</section>
+	<section class="slide" id="log--pretty">
+		<h2>log --graph</h2>
+		<p>ログをツリー表示する</p>
+	</section>
+	<section class="slide" id="rebase-i">
+		<h2>rebase -i &lt;commit&gt;</h2>
+		<p>過去のコミットをいじれる</p>
+	</section>
+	<section class="slide" id="cherry-pick">
+		<h2>cherry-pick &lt;commit&gt;</h2>
+		<p>他のブランチの特定のコミットをつまみ食い</p>
+	</section>
+	<section class="slide" id="blame">
+		<h2>blame &lt;path&gt;</h2>
+		<p>ファイルを変更したユーザを特定</p>
+	</section>
+	<section class="slide" id="gitk">
+		<h2>gitk</h2>
+		<p>gitのguiツール</p>
+	</section>
+	<section class="slide" id="rm">
+		<h2>rm &lt;path&gt;</h2>
+		<p>ステージから削除</p>
+	</section>
+	<section class="slide" id="mv">
+		<h2>mv &lt;path&gt; &lt;path&gt;</h2>
+		<p>移動</p>
+	</section>
+	<section class="slide" id="show--stat">
+		<h2>show --stat</h2>
+		<p>変更のあるファイル一覧</p>
+	</section>
+	<section class="slide" id="pull--rebase">
+		<h2>pull --rebase</h2>
+		<p>mergeコミットがのこらない</p>
+	</section>
+	<section class="slide" id="merge--noff">
+		<h2>merge --no-ff &lt;commit&gt;</h2>
+		<p>ffせずに必ずマージコミットが残る</p>
+	</section>
+	<section class="slide" id="reset--hard">
+		<h2>reset --hard &lt;commit&gt;</h2>
+		<p>変更がコミットされてないファイルを無視してリセット</p>
+	</section>
+	<section class="slide" id="clean-fd">
+		<h2>clean -fd</h2>
+		<p>コミットされてない奴らをすべて消す</p>
+	</section>
+	<section class="slide" id="commit--amend">
+		<h2>commit --amend</h2>
+		<p>直前のコミットを修正する</p>
+	</section>
+	<section class="slide" id="add-p">
+		<h2>add -p</h2>
+		<p>変更部分ごとにコミットするか選べる</p>
+	</section>
+	<section class="slide" id="config-l">
+		<h2>config -l</h2>
+		<p>現在のgit設定を出力</p>
+	</section>
+	<section class="slide" id="branch-r">
+		<h2>branch -r</h2>
+		<p>追跡ブランチのみ表示</p>
+	</section>
+	<section class="slide" id="gc">
+		<h2>gc</h2>
+		<p>.git/の中身を圧縮</p>
+	</section>
+	<section class="slide" id="clone--branch">
+		<h2>clone --branch &lt;name&gt;</h2>
+		<p>ブランチを指定してclone</p>
+	</section>
+	<section class="slide" id="status--short">
+		<h2>status --short</h2>
+		<p>短いstatus</p>
+	</section>
+</section>
+
+
+<footer class="slide" title="The End">
+	<h2>おしまい</h2>
+</footer>
+
+<script src="slideshow.js"></script>
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+<script>
+var slideshow = new SlideShow();
+
+var snippets = document.querySelectorAll('.snippet');
+for(var i=0; i<snippets.length; i++) {
+	new CSSSnippet(snippets[i]);
+}
+
+var cssControls = document.querySelectorAll('.css-control');
+for(var i=0; i<cssControls.length; i++) {
+	new CSSControl(cssControls[i]);
+}
+</script>
+	
+</body>
+</html>

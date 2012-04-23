@@ -1,0 +1,49 @@
+aside.image{
+  display: block;
+  text-align: left;
+}
+aside.image img{
+	margin-bottom:3px;
+}
+
+aside.image p{
+  font-size:0.7em;
+  margin:0;
+  padding:0;
+}
+
+.right{
+  float: right;
+}
+
+.center{
+  float: center;
+  text-align:center;
+}
+
+.on-slide-8 .URI2-scheme{color:#C00}
+.on-slide-9 .URI2-autholity{color:#C00}
+.on-slide-10 .URI2-userinfo{color:#C00}
+.on-slide-11 .URI2-host{color:#C00}
+.on-slide-12 .URI2-port{color:#C00}
+.on-slide-13 .URI2-path{color:#C00}
+.on-slide-14 .URI2-query{color:#C00}
+.on-slide-15 .URI2-fragment{color:#C00}
+
+.on-slide-29 .http5-requestline{color:#C00}
+.on-slide-30 .http5-method{color:#C00}
+.on-slide-31 .http5-uri{color:#C00}
+.on-slide-32 .http5-version{color:#C00}
+.on-slide-33 .http5-field{color:#C00}
+
+.on-slide-35 .http7-statusline{color:#C00}
+.on-slide-36 .http7-version{color:#C00}
+.on-slide-37 .http7-statuscode{color:#C00}
+.on-slide-38 .http7-statusmessage{color:#C00}
+.on-slide-39 .http7-field{color:#C00}
+
+ruby {
+	ruby-align: distribute-space;
+	ruby-overhang: auto;
+	ruby-position: above;
+}
