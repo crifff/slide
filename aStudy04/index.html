@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>俺様の考えた最強のCUI環境</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<meta name="generator" content="Slide Show (S9)">
+	<meta name="author" content="hoshina85">
+	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+	<style>
+		#Cover H2 {
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>俺様の考えた最強のCUI環境</h1>
+		<p>hoshina85</p>
+	</header>
+	<div class="slide bg" id="Cover"><div>
+		<section>
+			<header>
+				<h2>俺様の考えた最強のCUI環境</h2>
+			</header>
+			<img src="pictures/cover.jpg" alt="">
+			<!-- © John Carey, http://fiftyfootshadows.net/ -->
+		</section>
+	</div></div>
+
+<!-- todo: add slide.classes to div -->
+<!-- todo: create slide id from header? like a slug in blogs? -->
+        
+<div class="slide" id="2"><div>
+		<section>
+			<header>
+				<h1 id="section">別に最強じゃないです</h1>
+			</header>
+			<p>デザイナや他のエンジニアにこのツール使えよ捗るぞ。って言いたいだけです。</p>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="3"><div>
+		<section>
+			<header>
+				<h1 id="zsh">zsh</h1>
+			</header>
+			<p>ご存知z shell。bashの拡張版みたいなもん</p>
+
+<ul>
+  <li>zshはじめました</li>
+  <li>なんでもできるよ！</li>
+  <li>なんでも設定しないといけないよ</li>
+</ul>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="4"><div>
+		<section>
+			<header>
+				<h1 id="zsh--auto-fuzsh">zsh / auto-fu.zsh</h1>
+			</header>
+			<p>https://github.com/hchbaw/auto-fu.zsh</p>
+
+<p>自動補完プラグイン</p>
+
+<ul>
+  <li>Tabすら押さない横着プラグイン</li>
+  <li>hoge/とhoge-2/があると後者まで一気に補完しやがる憎めない奴</li>
+  <li>クォーてションや設定で回避してください</li>
+</ul>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="5"><div>
+		<section>
+			<header>
+				<h1 id="zsh--z">zsh / z</h1>
+			</header>
+			<p>https://github.com/rupa/z</p>
+
+<p>cdの拡張。過去に移動したとこに飛べるコマンド</p>
+
+<ul>
+  <li>z config -&gt; cd /home/User/webapps/app/protected/config</li>
+  <li>コマンドの1〜2割はcd</li>
+  <li>autojumpもいいけどインストール面倒だよねアレ</li>
+</ul>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="6"><div>
+		<section>
+			<header>
+				<h1 id="tig">tig</h1>
+			</header>
+			<p>https://github.com/jonas/tig</p>
+
+<p>gitのコミットログツール</p>
+
+<ul>
+  <li>gitを使うことを強いられているんだ！</li>
+  <li>きれい！</li>
+  <li><em style="color: red">tig blame</em>で捗る犯人探し</li>
+</ul>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="7"><div>
+		<section>
+			<header>
+				<h1 id="hub">hub</h1>
+			</header>
+			<p>github専用コマンド</p>
+
+<pre><code>$hub clone hoshina85/dotfiles
+  -&gt; git clone git://www.github.com/hoshina85/dotfiles
+</code></pre>
+
+<ul>
+  <li>gitのエイリアスも拡張できるよ </li>
+  <li><em style="color: red">hub create</em>でリモートリポジトリ作れるのは便利だなー</li>
+</ul>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="8"><div>
+		<section>
+			<header>
+				<h1 id="weechat">weechat</h1>
+			</header>
+			<p>CUIで使えるIRCクライアント</p>
+
+<ul>
+  <li>プラグインが豊富！</li>
+  <li>軽い！</li>
+  <li>使いやすいかはまあ置いておく</li>
+</ul>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="9"><div>
+		<section>
+			<header>
+				<h1 id="githubdotfiles">余談:githubでdotfiles管理</h1>
+			</header>
+			<p>ホームにdotfiles/とかつくって.vimrcや.zshrcやらをgitで管理すると捗る</p>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="10"><div>
+		<section>
+			<header>
+				<h1 id="githubdotfiles-1">余談:githubでdotfiles管理/リポジトリ作成</h1>
+			</header>
+			<p>例えばホームの.vimrcをdotfiles/vimrcに移す</p>
+
+<pre><code>mkdir ~/dotfiles
+mv ~/.vimrc ~/dotfiles/vimrc
+ln -s ~/dotfiles/vimrc ~/.vimrc
+hub create
+</code></pre>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="11"><div>
+		<section>
+			<header>
+				<h1 id="githubdotfiles-2">余談:githubでdotfiles管理/リモートに</h1>
+			</header>
+			<p>リポジトリ初期化したらhubコマンドでガッといける</p>
+
+<pre><code>cd ~/dotfiles
+git init
+git add .;git commit -m "initial commit"
+hub clone
+</code></pre>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="12"><div>
+		<section>
+			<header>
+				<h1 id="githubdotfiles-3">余談:githubでdotfiles管理/捗る</h1>
+			</header>
+			<ul>
+  <li>.bashrcや.jslintや.screenecやらたくさんできるのでどんどんぶち込みましょう</li>
+  <li>とりあえず設定して失敗してもgitなら戻せるよ</li>
+  <li>ちなみにbashrcとかの設定失敗してsshログインした瞬間落とされるようなときってどうしたらいいんでしょうね。怖い。</li>
+  <li>.ssh/*系はちょっとセキュアな内容なので含めちゃだめよ。</li>
+  <li>べつにDropBoxとかでもいいけど</li>
+</ul>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="13"><div>
+		<section>
+			<header>
+				<h1 id="markdown">余談2:markdownでスライド</h1>
+			</header>
+			<p>今回のスライドはgemのslideshowでつくりました</p>
+
+<p>https://github.com/geraldb/slideshow</p>
+
+<p>markdownで書けるのが素晴らしいですね。
+deck.jsやshower、html5slide等のJSスライドにも吐き出せます</p>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="14"><div>
+		<section>
+			<header>
+				<h1 id="section-1">おしまい</h1>
+			</header>
+			<p>スライドはgithubで公開してます</p>
+
+<p>https://www.github.com/hoshina85/slide/</p>
+
+
+		</section>
+</div></div>
+
+
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2011 Vadim Makeev, http://pepelsbey.net/ -->
+</body>
+</html>
