@@ -52,6 +52,7 @@ gitのコミットログツール
 
 
 #hub
+http://defunkt.io/hub/
 
 github専用コマンド
 
@@ -60,11 +61,12 @@ $hub clone hoshina85/dotfiles
   -> git clone git://www.github.com/hoshina85/dotfiles
 ~~~~~~
 
-* gitのエイリアスも拡張できるよ 
 * *hub create*{: style="color: red"}でリモートリポジトリ作れるのは便利だなー
 
 
 #weechat
+
+http://www.weechat.org/
 
 CUIで使えるIRCクライアント
 
