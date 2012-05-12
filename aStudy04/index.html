@@ -187,7 +187,6 @@
 <pre><code>mkdir ~/dotfiles
 mv ~/.vimrc ~/dotfiles/vimrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
-hub create
 </code></pre>
 
 
@@ -200,12 +199,14 @@ hub create
 			<header>
 				<h1 id="githubdotfiles-2">余談:githubでdotfiles管理/リモートに</h1>
 			</header>
-			<p>リポジトリ初期化したらhubコマンドでガッといける</p>
+			<p>リポジトリ初期化したらhubコマンドでガッといける
+※自身のgithubの設定が完了していること</p>
 
 <pre><code>cd ~/dotfiles
 git init
 git add .;git commit -m "initial commit"
-hub clone
+hub create
+git push
 </code></pre>
 
 
@@ -216,7 +217,23 @@ hub clone
 <div class="slide" id="12"><div>
 		<section>
 			<header>
-				<h1 id="githubdotfiles-3">余談:githubでdotfiles管理/捗る</h1>
+				<h1 id="githubdotfiles-3">余談:githubでdotfiles管理/他の環境から</h1>
+			</header>
+			<pre><code>mkdir ~/dotfiles
+cd  ~/dotfiles
+hub clone dotfiles
+ln -s ~/dotfiles/vimrc ~/.vimrc
+</code></pre>
+
+
+
+		</section>
+</div></div>
+        
+<div class="slide" id="13"><div>
+		<section>
+			<header>
+				<h1 id="githubdotfiles-4">余談:githubでdotfiles管理/捗る</h1>
 			</header>
 			<ul>
   <li>.bashrcや.jslintや.screenecやらたくさんできるのでどんどんぶち込みましょう</li>
@@ -231,7 +248,7 @@ hub clone
 		</section>
 </div></div>
         
-<div class="slide" id="13"><div>
+<div class="slide" id="14"><div>
 		<section>
 			<header>
 				<h1 id="markdown">余談2:markdownでスライド</h1>
@@ -248,7 +265,7 @@ deck.jsやshower、html5slide等のJSスライドにも吐き出せます</p>
 		</section>
 </div></div>
         
-<div class="slide" id="14"><div>
+<div class="slide" id="15"><div>
 		<section>
 			<header>
 				<h1 id="section-1">おしまい</h1>

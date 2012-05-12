@@ -28,7 +28,7 @@ https://github.com/hchbaw/auto-fu.zsh
 
 * Tabすら押さない横着プラグイン
 * hoge/とhoge-2/があると後者まで一気に補完しやがる憎めない奴
-* クォーてションや設定で回避してください
+* クォーテーションや設定で回避してください
 
 #zsh / z
 
@@ -86,18 +86,28 @@ CUIで使えるIRCクライアント
 mkdir ~/dotfiles
 mv ~/.vimrc ~/dotfiles/vimrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
-hub create
 ~~~~~~
 
 #余談:githubでdotfiles管理/リモートに
 
 リポジトリ初期化したらhubコマンドでガッといける
+※自身のgithubの設定が完了していること
 
 ~~~~~~
 cd ~/dotfiles
 git init
 git add .;git commit -m "initial commit"
-hub clone
+hub create
+git push
+~~~~~~
+
+
+#余談:githubでdotfiles管理/他の環境から
+~~~~~~
+mkdir ~/dotfiles
+cd  ~/dotfiles
+hub clone dotfiles
+ln -s ~/dotfiles/vimrc ~/.vimrc
 ~~~~~~
 
 #余談:githubでdotfiles管理/捗る
