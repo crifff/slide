@@ -22,3 +22,8 @@ gitのよく使ったり使わなかったりするコマンドとかオプシ�
 http://hoshina85.github.com/slide/aStudy04/index.html
 
 ネタに困るとあるものをただ列挙してごまかそうとするのは悪い癖だと思います。CUIのツールについて。昨年に勝るとも劣らない出来。
+
+##aStudey05
+http://hoshina85.github.com/slide/aStudy05/index.html
+
+磯野ー！勉強会に行こうぜー！発表剃る前に良い記事がホッテントリされてたのでそれ見ればいいと思う。10年に1度の出来。
